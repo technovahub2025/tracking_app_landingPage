@@ -81,7 +81,7 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "Technovahub Career cut our shift follow-up calls in half. Supervisors can spot issues before they become delays.",
+      "TrackPulse cut our shift follow-up calls in half. Supervisors can spot issues before they become delays.",
     name: "Nina S.",
     role: "Operations Lead"
   },
@@ -130,7 +130,7 @@ const partnerBrands = [
 
 export default function App() {
   const [isDark, setIsDark] = useState(() => {
-    const savedTheme = localStorage.getItem("technovahub-career-theme");
+    const savedTheme = localStorage.getItem("trackpulse-theme");
     return savedTheme ? savedTheme === "dark" : false;
   });
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -147,7 +147,7 @@ export default function App() {
   useEffect(() => {
     const themeName = isDark ? "dark" : "light";
     document.body.classList.toggle("theme-dark", isDark);
-    localStorage.setItem("technovahub-career-theme", themeName);
+    localStorage.setItem("trackpulse-theme", themeName);
   }, [isDark]);
 
   useEffect(() => {
@@ -249,7 +249,7 @@ export default function App() {
         <nav className="topbar navbar navbar-expand-lg rounded-pill px-3 py-2">
           <a className="navbar-brand brand fw-bold d-flex align-items-center gap-2 m-0" href="#">
             <span className="brand-dot" />
-            <span>Technovahub Career</span>
+            <span>TrackPulse</span>
           </a>
           <button
             className="navbar-toggler border-0 shadow-none"
@@ -550,11 +550,10 @@ export default function App() {
         </section>
 
         <section id="contact" className="contact rounded-4 p-4 mt-4 reveal">
-          <h2 className="fw-bold section-title">Launch Technovahub Career for your team</h2>
+          <h2 className="fw-bold section-title">Launch TrackPulse for your team</h2>
           <p className="mb-0 mt-2">
             See how supervisor and field-user workflows fit your operations.
           </p>
-          <p className="mb-0 mt-1 small fw-medium">technovahubcareer@gmail.com</p>
           <form className="row g-2 mt-3" onSubmit={handleDemoSubmit}>
             <div className="col-md-4">
               <input className="form-control form-control-lg" type="text" placeholder="Company name" />
@@ -578,7 +577,7 @@ export default function App() {
 
       <footer className="container-lg pb-4 text-muted">
         <p className="mb-0 footer-copy">
-          &copy; 2026 <span className="footer-brand">TechnovaHub.</span> All Rights Reserved.
+          &copy; 2026 <span className="footer-brand">Technovahub.</span> All Rights Reserved.
         </p>
       </footer>
 
