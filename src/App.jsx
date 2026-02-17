@@ -577,7 +577,9 @@ export default function App() {
       </main>
 
       <footer className="container-lg pb-4 text-muted">
-        <p className="mb-0">Technovahub Career | technovahubcareer@gmail.com</p>
+        <p className="mb-0 footer-copy">
+          &copy; 2026 <span className="footer-brand">TechnovaHub.</span> All Rights Reserved.
+        </p>
       </footer>
 
       <div className="floating-actions">

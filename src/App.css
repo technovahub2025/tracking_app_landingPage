@@ -557,6 +557,16 @@ body {
   color: #1d2b0f;
 }
 
+.footer-copy {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.footer-brand {
+  color: #1f2f4c;
+  font-weight: 700;
+}
+
 body.theme-dark {
   --ink: #e9edf8;
   --muted: #a9b2c6;
@@ -681,6 +691,10 @@ body.theme-dark .faq-item .accordion-button:not(.collapsed) {
 
 body.theme-dark .demo-message {
   color: #b6f0c2;
+}
+
+body.theme-dark .footer-brand {
+  color: #c2d8ff;
 }
 
 body.theme-dark .hero-cta-secondary {
