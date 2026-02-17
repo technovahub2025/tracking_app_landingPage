@@ -549,24 +549,63 @@ export default function App() {
           </div>
         </section>
 
-        <section id="contact" className="contact rounded-4 p-4 mt-4 reveal">
-          <h2 className="fw-bold section-title">Launch TrackPulse for your team</h2>
-          <p className="mb-0 mt-2">
-            See how supervisor and field-user workflows fit your operations.
-          </p>
-          <form className="row g-2 mt-3" onSubmit={handleDemoSubmit}>
-            <div className="col-md-4">
-              <input className="form-control form-control-lg" type="text" placeholder="Company name" />
+        <section id="contact" className="contact contact-shell p-4 mt-4 reveal">
+          <div className="row g-4 align-items-stretch">
+            <div className="col-lg-5">
+              <div className="contact-info">
+                <h2 className="fw-bold contact-title">Talk to the TrackPulse Team</h2>
+                <p className="mb-0 mt-3 contact-copy">
+                  Explore how TrackPulse can improve field visibility, supervisor coordination, and
+                  daily reporting quality.
+                </p>
+
+                <div className="contact-meta mt-4">
+                  <p className="meta-label mb-1">EMAIL</p>
+                  <p className="meta-value mb-0">technovahubcareer@gmail.com</p>
+                </div>
+
+                <div className="contact-meta mt-4">
+                  <p className="meta-label mb-1">PHONE</p>
+                  <p className="meta-value mb-0">+91 9XXXXXXXXX</p>
+                </div>
+
+                <div className="contact-meta mt-4">
+                  <p className="meta-label mb-2">WEBSITE</p>
+                  <span className="meta-chip"><a href="https://www.technovahub.in/">TechnovaHub</a></span>
+                </div>
+
+                <div className="contact-meta mt-3">
+                  <p className="meta-label mb-2">ADDRESS</p>
+                  <span className="meta-chip meta-chip-outline"><a href="https://www.google.com/maps?q=Technova+Hub">Location</a></span>
+                </div>
+              </div>
             </div>
-            <div className="col-md-4">
-              <input className="form-control form-control-lg" type="email" placeholder="Work email" />
+
+            <div className="col-lg-7">
+              <form className="contact-form-box" onSubmit={handleDemoSubmit}>
+                <input className="form-control form-control-lg contact-input" type="text" placeholder="Full Name" />
+                <input className="form-control form-control-lg contact-input" type="email" placeholder="Work Email" />
+                <input
+                  className="form-control form-control-lg contact-input"
+                  type="text"
+                  placeholder="Company Name"
+                />
+                <input
+                  className="form-control form-control-lg contact-input"
+                  type="tel"
+                  placeholder="Phone Number"
+                />
+                <textarea
+                  className="form-control form-control-lg contact-input contact-textarea"
+                  placeholder="Tell us about your requirement"
+                />
+                <button className="btn contact-submit-btn btn-lg w-100" type="submit">
+                  Request a Demo
+                </button>
+              </form>
             </div>
-            <div className="col-md-4 d-grid">
-              <button className="btn btn-dark btn-lg" type="submit">
-                Book a Demo
-              </button>
-            </div>
-          </form>
+          </div>
+
           {demoSubmitted ? (
             <p className="mt-3 mb-0 fw-semibold demo-message">
               Demo request captured. Our team will contact you shortly.
