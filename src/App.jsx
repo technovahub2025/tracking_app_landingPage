@@ -566,7 +566,8 @@ export default function App() {
 
                 <div className="contact-meta mt-4">
                   <p className="meta-label mb-1">PHONE</p>
-                  <p className="meta-value mb-0">+91 9XXXXXXXXX</p>
+                  <p className="meta-value mb-0">+91 9629600230
+</p>
                 </div>
 
                 <div className="contact-meta mt-4">
