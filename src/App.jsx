@@ -567,12 +567,14 @@ export default function App() {
                 <div className="contact-meta mt-4">
                   <p className="meta-label mb-1">PHONE</p>
                   <p className="meta-value mb-0">+91 9629600230
-</p>
+                  </p>
                 </div>
 
                 <div className="contact-meta mt-4">
                   <p className="meta-label mb-2">WEBSITE</p>
-                  <span className="meta-chip"><a href="https://www.technovahub.in/">TechnovaHub</a></span>
+                  <span className="meta-chip"><a href="https://www.technovahub.in/"
+                    target="_blank"
+                    rel="noopener noreferrer">TechnovaHub</a></span>
                 </div>
 
                 <div className="contact-meta mt-3">
