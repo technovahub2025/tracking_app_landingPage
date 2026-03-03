@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import employeeShiftImage from "./assets/images/employee-shift.jpg";
 import supervisorMonitoringImage from "./assets/images/supervisor-monitoring.jpg";
 import mobileCloudImage from "./assets/images/mobile-cloud.jpg";
+import trackPulseLogo from "./assets/images/logo(track pulse).png";
 import brandEaton from "./assets/brand/eaton.jpg";
 import brandMeta from "./assets/brand/meta_PNG4.png";
 import brandMgm from "./assets/brand/mgm.png";
@@ -247,9 +248,8 @@ export default function App() {
 
       <header className="container-lg mt-3 site-header">
         <nav className="topbar navbar navbar-expand-lg rounded-pill px-3 py-2">
-          <a className="navbar-brand brand fw-bold d-flex align-items-center gap-2 m-0" href="#">
-            <span className="brand-dot" />
-            <span>TrackPulse</span>
+          <a className="navbar-brand brand fw-bold d-flex align-items-center m-0" href="#">
+            <img className="brand-logo" src={trackPulseLogo} alt="TrackPulse" />
           </a>
           <button
             className="navbar-toggler border-0 shadow-none"

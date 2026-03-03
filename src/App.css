@@ -37,6 +37,7 @@ body {
   position: sticky;
   top: 0.7rem;
   z-index: 1040;
+  margin-bottom: 0.45rem;
 }
 
 .topbar {
@@ -47,7 +48,7 @@ body {
 }
 
 .site-main {
-  padding-top: 0.7rem;
+  padding-top: 1.15rem;
 }
 
 .site-main > section + section {
@@ -99,14 +100,17 @@ body {
 
 .brand {
   font-family: "Sora", sans-serif;
+  line-height: 1;
 }
 
-.brand-dot {
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: linear-gradient(160deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 0 5px rgba(214, 230, 28, 0.2);
+.brand-logo {
+  width: clamp(200px, 22vw, 280px);
+  height: clamp(52px, 5vw, 72px);
+  max-width: 100%;
+  display: block;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .eyebrow {
@@ -1089,6 +1093,7 @@ body.theme-dark .hero-cta-secondary:hover {
 @media (max-width: 992px) {
   .site-header {
     top: 0.4rem;
+    margin-bottom: 0.35rem;
   }
 
   .topbar {
@@ -1112,6 +1117,15 @@ body.theme-dark .hero-cta-secondary:hover {
 
   .topbar .btn {
     width: fit-content;
+  }
+
+  .brand-logo {
+    width: clamp(170px, 52vw, 220px);
+    height: clamp(46px, 10vw, 56px);
+  }
+
+  .site-main {
+    padding-top: 0.95rem;
   }
 
   body.theme-dark .topbar .navbar-collapse {
@@ -1178,5 +1192,94 @@ body.theme-dark .hero-cta-secondary:hover {
   .theme-toggle {
     margin-top: 0.45rem;
     margin-bottom: 0.35rem;
+  }
+
+  .topbar .navbar-collapse .theme-toggle,
+  .topbar .navbar-collapse .nav-cta {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-main {
+    padding-top: 0.85rem;
+  }
+
+  .site-main > section + section {
+    margin-top: 0.8rem;
+  }
+
+  .hero-title {
+    max-width: none;
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .phone-stack {
+    max-width: 100%;
+  }
+
+  .brand-tile {
+    min-width: 150px;
+  }
+
+  .map-canvas {
+    min-height: 380px;
+  }
+
+  .topbar .navbar-collapse .nav-cta {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.35rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .site-header {
+    top: 0.3rem;
+  }
+
+  .topbar {
+    padding: 0.75rem 0.8rem !important;
+  }
+
+  .topbar .navbar-brand {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  .topbar .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .hero-section {
+    padding: 0.9rem;
+    border-radius: 20px;
+  }
+
+  .brand-logo {
+    width: min(62vw, 200px);
+    height: 44px;
+    object-position: left center;
+    transform: translateX(-22px);
+  }
+
+  .brand-tile {
+    min-width: 130px;
+  }
+
+  .map-canvas {
+    min-height: 320px;
+  }
+
+  .floating-actions {
+    right: 10px;
+    bottom: 12px;
   }
 }
