@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import employeeShiftImage from "./assets/images/employee-shift.jpg";
 import supervisorMonitoringImage from "./assets/images/supervisor-monitoring.jpg";
 import mobileCloudImage from "./assets/images/mobile-cloud.jpg";
-import trackPulseLogo from "./assets/images/logo(track pulse).png";
+import trackPulseLogoLight from "./assets/images/logo_for_light.png";
+import trackPulseLogoDark from "./assets/images/logo_for_dark.png";
 import brandEaton from "./assets/brand/eaton.jpg";
 import brandMeta from "./assets/brand/meta_PNG4.png";
 import brandMgm from "./assets/brand/mgm.png";
@@ -249,7 +250,7 @@ export default function App() {
       <header className="container-lg mt-3 site-header">
         <nav className="topbar navbar navbar-expand-lg rounded-pill px-3 py-2">
           <a className="navbar-brand brand fw-bold d-flex align-items-center m-0" href="#">
-            <img className="brand-logo" src={trackPulseLogo} alt="TrackPulse" />
+            <img className="brand-logo" src={isDark ? trackPulseLogoDark : trackPulseLogoLight} alt="TrackPulse" />
           </a>
           <button
             className="navbar-toggler border-0 shadow-none"
