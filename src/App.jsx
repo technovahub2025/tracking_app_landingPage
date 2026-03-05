@@ -339,8 +339,8 @@ export default function App() {
                 </div>
                 <div className="mini-card m-3">
                   <p className="mini-title mb-2">Registered Users (1)</p>
-                  <p className="mb-1">ID: 12345</p>
-                  <p className="mb-1">Email: No email</p>
+                  <p className="mb-1">ID: TechnovaHub</p>
+                  <p className="mb-1">Email: technovahubcareer@gmail.com</p>
                   <p className="mb-0">Role: user</p>
                 </div>
               </article>
