@@ -13,6 +13,8 @@ import brandRane from "./assets/brand/rane.png";
 import brandSg from "./assets/brand/sg.jpg";
 import brandSolara from "./assets/brand/solara.png";
 import brandTvs from "./assets/brand/tvs.png";
+import { MessageCircleMore } from "lucide-react";
+import ChatWindow from "./components/ChatWindow.jsx";
 
 const features = [
   {
@@ -135,6 +137,7 @@ export default function App() {
     const savedTheme = localStorage.getItem("trackpulse-theme");
     return savedTheme ? savedTheme === "dark" : false;
   });
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [statValues, setStatValues] = useState(stats.map(() => 0));
   const [statsStarted, setStatsStarted] = useState(false);
@@ -358,8 +361,6 @@ export default function App() {
           </div>
         </section>
 
-
-
         <section id="features" className="py-4">
           <h2 className="fw-bold reveal section-title">Everything your field team needs in one app.</h2>
           <div className="row g-3 mt-1">
@@ -419,7 +420,6 @@ export default function App() {
             ))}
           </div>
         </section>
-
 
         <section className="map-preview mt-4 p-3 p-md-4 reveal">
           <div className="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
@@ -489,6 +489,7 @@ export default function App() {
             ))}
           </div>
         </section>
+
         <section className="brands-strip p-4 mt-3 reveal">
           <h2 className="fw-bold text-center mb-3 section-title">Trusted by 200+ brands across 5+ countries</h2>
           <div className="rating-pill mx-auto mb-4">
@@ -516,6 +517,7 @@ export default function App() {
             </div>
           </div>
         </section>
+
         <section className="faq mt-4 p-4 reveal">
           <h2 className="fw-bold section-title">Frequently asked questions</h2>
           <div className="accordion mt-3" id="faqAccordion">
@@ -567,20 +569,23 @@ export default function App() {
 
                 <div className="contact-meta mt-4">
                   <p className="meta-label mb-1">PHONE</p>
-                  <p className="meta-value mb-0">+91 9629600230
-                  </p>
+                  <p className="meta-value mb-0">+91 9629600230</p>
                 </div>
 
                 <div className="contact-meta mt-4">
                   <p className="meta-label mb-2">WEBSITE</p>
-                  <span className="meta-chip"><a href="https://www.technovahub.in/"
-                    target="_blank"
-                    rel="noopener noreferrer">TechnovaHub</a></span>
+                  <span className="meta-chip">
+                    <a href="https://www.technovahub.in/" target="_blank" rel="noopener noreferrer">
+                      TechnovaHub
+                    </a>
+                  </span>
                 </div>
 
                 <div className="contact-meta mt-3">
                   <p className="meta-label mb-2">ADDRESS</p>
-                  <span className="meta-chip meta-chip-outline"><a href="https://www.google.com/maps?q=Technova+Hub">Location</a></span>
+                  <span className="meta-chip meta-chip-outline">
+                    <a href="https://www.google.com/maps?q=Technova+Hub">Location</a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -638,6 +643,22 @@ export default function App() {
           Register
         </a>
       </div>
+
+      <button
+        type="button"
+        className={`chat-launcher ${isChatOpen ? "open" : ""}`}
+        onClick={() => setIsChatOpen(true)}
+        aria-label="Open chat bot"
+        aria-expanded={isChatOpen}
+      >
+        <MessageCircleMore size={26} strokeWidth={2.2} />
+      </button>
+
+      <ChatWindow
+        open={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+        onNudge={() => setIsChatOpen(true)}
+      />
     </>
   );
 }

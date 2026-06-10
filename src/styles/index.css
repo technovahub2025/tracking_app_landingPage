@@ -1,0 +1,7 @@
+/* ─── TECHNOVA HUB — GLOBAL STYLESHEET ──────────────────────────────────── */
+/* Imports are ordered: tokens first, then feature-level sheets.             */
+/* Add new feature sheets here rather than embedding styles in components.   */
+
+@import './tokens.css';
+@import './background.css';
+@import './chat.css';
